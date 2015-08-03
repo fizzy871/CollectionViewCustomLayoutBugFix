@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,95 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kTh-Xe-CWB">
+                                <rect key="frame" x="0.0" y="62" width="600" height="538"/>
+                                <connections>
+                                    <segue destination="ptI-0F-zoL" kind="embed" identifier="collView" id="3ip-1s-JSC"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sq3-nG-Ub4">
+                                <rect key="frame" x="16" y="20" width="118" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="KOg-wS-zOr"/>
+                                    <constraint firstAttribute="width" constant="118" id="k9H-O6-Zvl"/>
+                                </constraints>
+                                <state key="normal" title="remove cell">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeCell:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KqQ-dt-GGo"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kTh-Xe-CWB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="42" id="0PJ-hA-6Y2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kTh-Xe-CWB" secondAttribute="bottom" id="PBO-lS-UW3"/>
+                            <constraint firstItem="kTh-Xe-CWB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dwf-Kf-5Ew"/>
+                            <constraint firstItem="sq3-nG-Ub4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="n5Q-S9-b17"/>
+                            <constraint firstItem="sq3-nG-Ub4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rIN-Al-mma"/>
+                            <constraint firstAttribute="trailing" secondItem="kTh-Xe-CWB" secondAttribute="trailing" id="rXT-55-rlW"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Images Collection View Controller-->
+        <scene sceneID="O6l-fg-Shz">
+            <objects>
+                <collectionViewController id="ptI-0F-zoL" customClass="ImagesCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Fnn-4R-T6V">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="538"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewLayout key="collectionViewLayout" id="OlK-8r-fyN" customClass="mosaicGridLayout"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="sf1-Wr-iDa" customClass="ImageCollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TLf-5i-Kqq">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="TLf-5i-Kqq" firstAttribute="leading" secondItem="sf1-Wr-iDa" secondAttribute="leading" id="4kl-cA-CcG"/>
+                                    <constraint firstItem="TLf-5i-Kqq" firstAttribute="top" secondItem="sf1-Wr-iDa" secondAttribute="top" id="Q6L-zW-pL7"/>
+                                    <constraint firstAttribute="trailing" secondItem="TLf-5i-Kqq" secondAttribute="trailing" id="qHz-As-JSh"/>
+                                    <constraint firstAttribute="bottom" secondItem="TLf-5i-Kqq" secondAttribute="bottom" id="wWz-uF-VKj"/>
+                                </constraints>
+                                <size key="customSize" width="200" height="200"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="imageView" destination="TLf-5i-Kqq" id="EJY-c7-4jd"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="ptI-0F-zoL" id="6mb-9x-cRg"/>
+                            <outlet property="delegate" destination="ptI-0F-zoL" id="sTN-vh-yXM"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <outlet property="mosaicGridLayout" destination="OlK-8r-fyN" id="VdD-Cd-Xop"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CFi-Hx-Jzd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1007" y="307"/>
         </scene>
     </scenes>
 </document>

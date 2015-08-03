@@ -7,21 +7,23 @@
 //
 
 #import "ViewController.h"
+#import "ImagesCollectionViewController.h"
 
 @interface ViewController ()
-
+@property (nonatomic, weak) ImagesCollectionViewController *collViewCon;
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+- (IBAction)removeCell:(id)sender {
+    NSArray *array = self.collViewCon.dataArray;
+    self.collViewCon.dataArray = [array subarrayWithRange:NSMakeRange(0, array.count-1)];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"collView"]) {
+        self.collViewCon = segue.destinationViewController;
+    }
 }
 
 @end

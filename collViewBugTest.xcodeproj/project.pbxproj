@@ -14,6 +14,9 @@
 		6DF8E0D51B6F640200C33D5D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DF8E0D41B6F640200C33D5D /* Images.xcassets */; };
 		6DF8E0D81B6F640200C33D5D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DF8E0D61B6F640200C33D5D /* LaunchScreen.xib */; };
 		6DF8E0E41B6F640200C33D5D /* collViewBugTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF8E0E31B6F640200C33D5D /* collViewBugTestTests.m */; };
+		6DF8E0EF1B6F645F00C33D5D /* mosaicGridLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF8E0EE1B6F645F00C33D5D /* mosaicGridLayout.m */; };
+		6DF8E0F21B6F64A400C33D5D /* ImagesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF8E0F11B6F64A400C33D5D /* ImagesCollectionViewController.m */; };
+		6DF8E0F51B6F64FB00C33D5D /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF8E0F41B6F64FB00C33D5D /* ImageCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		6DF8E0DD1B6F640200C33D5D /* collViewBugTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = collViewBugTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DF8E0E21B6F640200C33D5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DF8E0E31B6F640200C33D5D /* collViewBugTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = collViewBugTestTests.m; sourceTree = "<group>"; };
+		6DF8E0ED1B6F645F00C33D5D /* mosaicGridLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mosaicGridLayout.h; sourceTree = "<group>"; };
+		6DF8E0EE1B6F645F00C33D5D /* mosaicGridLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mosaicGridLayout.m; sourceTree = "<group>"; };
+		6DF8E0F01B6F64A400C33D5D /* ImagesCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesCollectionViewController.h; sourceTree = "<group>"; };
+		6DF8E0F11B6F64A400C33D5D /* ImagesCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesCollectionViewController.m; sourceTree = "<group>"; };
+		6DF8E0F31B6F64FB00C33D5D /* ImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCollectionViewCell.h; sourceTree = "<group>"; };
+		6DF8E0F41B6F64FB00C33D5D /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +90,16 @@
 		6DF8E0C61B6F640200C33D5D /* collViewBugTest */ = {
 			isa = PBXGroup;
 			children = (
+				6DF8E0ED1B6F645F00C33D5D /* mosaicGridLayout.h */,
+				6DF8E0EE1B6F645F00C33D5D /* mosaicGridLayout.m */,
 				6DF8E0CB1B6F640200C33D5D /* AppDelegate.h */,
 				6DF8E0CC1B6F640200C33D5D /* AppDelegate.m */,
 				6DF8E0CE1B6F640200C33D5D /* ViewController.h */,
 				6DF8E0CF1B6F640200C33D5D /* ViewController.m */,
+				6DF8E0F01B6F64A400C33D5D /* ImagesCollectionViewController.h */,
+				6DF8E0F11B6F64A400C33D5D /* ImagesCollectionViewController.m */,
+				6DF8E0F31B6F64FB00C33D5D /* ImageCollectionViewCell.h */,
+				6DF8E0F41B6F64FB00C33D5D /* ImageCollectionViewCell.m */,
 				6DF8E0D11B6F640200C33D5D /* Main.storyboard */,
 				6DF8E0D41B6F640200C33D5D /* Images.xcassets */,
 				6DF8E0D61B6F640200C33D5D /* LaunchScreen.xib */,
@@ -220,7 +235,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DF8E0D01B6F640200C33D5D /* ViewController.m in Sources */,
+				6DF8E0EF1B6F645F00C33D5D /* mosaicGridLayout.m in Sources */,
 				6DF8E0CD1B6F640200C33D5D /* AppDelegate.m in Sources */,
+				6DF8E0F21B6F64A400C33D5D /* ImagesCollectionViewController.m in Sources */,
+				6DF8E0F51B6F64FB00C33D5D /* ImageCollectionViewCell.m in Sources */,
 				6DF8E0CA1B6F640200C33D5D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
