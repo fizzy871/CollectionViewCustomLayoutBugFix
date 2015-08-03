@@ -20,6 +20,8 @@
     
     NSInteger numberOfElements = [self.collectionView numberOfItemsInSection:0];
     
+    self.layoutAttributes = [NSMutableDictionary dictionary];
+    
     for (NSInteger currentElement = 0; currentElement < numberOfElements; currentElement++) {
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:currentElement inSection:0];
         UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
@@ -87,14 +89,6 @@
         }
     }];
     return attributesInRect;
-}
-
-#pragma mark - getters, setters
--(NSMutableDictionary *)layoutAttributes {
-    if (!_layoutAttributes){
-        _layoutAttributes = [NSMutableDictionary dictionary];
-    }
-    return _layoutAttributes;
 }
 
 @end
